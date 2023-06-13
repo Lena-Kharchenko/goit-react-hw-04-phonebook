@@ -45,9 +45,7 @@ export default function App() {
       contact => contact.id !== event.target.id
     );
 
-    setContacts({
-      contacts: [...deleteSelectContact],
-    });
+    setContacts([...deleteSelectContact]);
   };
 
   return (
