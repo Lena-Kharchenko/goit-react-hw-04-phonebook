@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './contactList.module.css';
 
-const ContactList = ({ contactList, onChange }) => {
+export default function ContactList({ contactList, onChange }) {
   return (
     <>
       {contactList.length === 0 ? (
@@ -21,9 +21,7 @@ const ContactList = ({ contactList, onChange }) => {
       )}
     </>
   );
-};
-
-export default ContactList;
+}
 
 ContactList.propTypes = {
   contactsList: PropTypes.arrayOf(
