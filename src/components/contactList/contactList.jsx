@@ -24,7 +24,7 @@ export default function ContactList({ contactList, onChange }) {
 }
 
 ContactList.propTypes = {
-  contactsList: PropTypes.arrayOf(
+  contactList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
