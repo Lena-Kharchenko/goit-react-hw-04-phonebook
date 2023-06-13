@@ -21,9 +21,9 @@ let userSchema = object().shape({
     .required(),
 });
 
-export default class ContactForm extends Component {
-  handleSubmit = ({ name, number }, action) => {
-    this.props.onSubmit(nanoid(), name, number);
+export default function ContactForm({ onSubmit }) {
+  const handleSubmit = ({ name, number }, action) => {
+    onSubmit(nanoid(), name, number);
     action.resetForm();
   };
 
@@ -31,13 +31,13 @@ export default class ContactForm extends Component {
     return (
       <Formik
         initialValues={initialValues}
-        onSubmit={this.handleSubmit}
+        onSubmit={handleSubmit}
         validationSchema={userSchema}
       >
         <Form autoComplete="off">
           <label>
             <p>Name</p>
-            <Field type="text" name="name" onFocus={this.className} />
+            <Field type="text" name="name"/>
             <ErrorMessage component="p" className={css.nameError} name="name" />
           </label>
 
