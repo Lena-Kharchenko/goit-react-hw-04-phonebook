@@ -22,7 +22,6 @@ export default function ContactList({ contactList, onChange }) {
     </>
   );
 }
-
 ContactList.propTypes = {
   contactList: PropTypes.arrayOf(
     PropTypes.shape({

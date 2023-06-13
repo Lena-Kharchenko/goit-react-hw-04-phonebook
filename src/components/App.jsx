@@ -3,7 +3,7 @@ import ContactForm from './contactForm/contactForm';
 import ContactList from './contactList/contactList';
 import ContactFilter from './contactFilter/contactFilter';
 import Notiflix from 'notiflix';
-import contactsList from '../savedContactList/savedContactList';
+import contactsList from 'savedContactList/savedContactList';
 
 export default function App() {
   const [contacts, setContacts] = useState(
