@@ -7,7 +7,7 @@ import contactsList from '../savedContactList/savedContactList';
 
 export default function App() {
   const [contacts, setContacts] = useState(
-    () => JSON.parse.window.localStorage.getItem('contacts') ?? contactsList
+    () => JSON.parse(window.localStorage.getItem('contacts')) ?? contactsList
   );
 
   const [filter, setFilter] = useState('');
@@ -56,7 +56,7 @@ export default function App() {
       <ContactForm onSubmit={addContacts} />
       <ContactFilter onChange={handleChangeFilter} value={filter} />
       <ContactList
-        contactList={visibleContacts()}
+        contactList={visibleContacts}
         onChange={handleDeleteContact}
       />
     </div>
